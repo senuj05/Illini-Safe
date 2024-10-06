@@ -39,10 +39,6 @@ dataset: https://police.illinois.edu/info/daily-crime-log/
 
 
 ## Contact
-
-For any questions or feedback, please contact:
-
-- Name: Senuvi Jayasinghe
 - Email: senu0531@gmail.com / senuj2@illinois.edu
 
 ---
