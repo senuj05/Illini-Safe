@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+header {
+    text-align: center;
+    background-color: #007acc;
+    color: #fff;
+    padding: 1em;
+}
+
+section {
+    padding: 2em;
+    margin: 1em 0;
+}
+
+h2 {
+    color: #007acc;
+}
+
+.stats {
+    display: flex;
+    gap: 1em;
+}
+
+.stats div {
+    background: #e0f7fa;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#map, #predictions {
+    border: 1px solid #ccc;
+    padding: 2em;
+    margin-top: 1em;
+    text-align: center;
+}
