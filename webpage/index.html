@@ -21,32 +21,66 @@
             <div><strong>Total Incidents:</strong> 1200</div>
             <div><strong>Peak Time:</strong> 8 PM - 12 AM</div>
             <div><strong>Top Location:</strong> Library</div>
+            <div><strong>Most Common Type:</strong> Theft</div>
         </div>
     </section>
 
     <!-- Data Visualization Section -->
     <section id="visualization">
         <h2>Incident Hotspots</h2>
+        <p>Explore where incidents most commonly occur on campus using the interactive map below.</p>
         <div id="map"> <!-- Placeholder for Map Visualization -->
             <p>Interactive map of incident hotspots goes here.</p>
+        </div>
+        <div class="chart">
+            <h3>Incident Types by Frequency</h3>
+            <p>Visual representation of incident types and their frequency across campus.</p>
+            <canvas id="incidentChart"></canvas> <!-- Placeholder for bar chart -->
         </div>
     </section>
 
     <!-- ML Insights Section -->
     <section id="ml-insights">
         <h2>Predictive Analysis</h2>
-        <p>Based on our data, we predict the following trends...</p>
+        <p>Using machine learning, we aim to identify patterns and predict potential future hotspots based on past data.</p>
         <div id="predictions">
-            <!-- Placeholder for Predictions -->
-            <p>Predicted incident patterns go here.</p>
+            <ul>
+                <li><strong>Weekend Nights:</strong> Higher incident rate predicted around major campus venues.</li>
+                <li><strong>Holidays:</strong> Increased likelihood of certain incidents in quieter campus areas.</li>
+                <li><strong>Seasonal Trends:</strong> Theft incidents peak at the beginning of each semester.</li>
+            </ul>
         </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta">
+        <h2>Get Involved</h2>
+        <p>Help us make our campus a safer place. Report suspicious activities and stay informed by following our updates.</p>
+        <button onclick="location.href='https://uiuc.edu/safety-updates'">Learn More</button>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="team-member">
+            <img src="images/senuvi.jpg" alt="Senuvi Jayasinghe">
+            <h3>Senuvi Jayasinghe</h3>
+            <p>Frontend Developer & Data Analyst</p>
+        </div>
+        <!-- Additional team members could be added here -->
     </section>
 
     <!-- About Section -->
     <section id="about">
         <h2>About This Project</h2>
-        <p>This project was created as part of a campus safety initiative.</p>
+        <p>This project was created as part of a campus safety initiative at UIUC to help make our campus safer for everyone.</p>
     </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Campus Safety Project. All rights reserved.</p>
+        <p><a href="mailto:support@uiuc.edu">Contact Us</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
