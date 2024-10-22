@@ -9,7 +9,7 @@ body {
 
 header {
     text-align: center;
-    background-color: #007acc;
+    background-color: #042046;
     color: #fff;
     padding: 1em;
 }
@@ -20,7 +20,7 @@ section {
 }
 
 h2 {
-    color: #007acc;
+    color: #000000;
 }
 
 .stats {
@@ -29,15 +29,26 @@ h2 {
 }
 
 .stats div {
-    background: #e0f7fa;
+    background: #d3d7d7;
     padding: 1em;
     border-radius: 5px;
     text-align: center;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 #map, #predictions {
     border: 1px solid #ccc;
     padding: 2em;
     margin-top: 1em;
     text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 400px;
 }
