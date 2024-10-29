@@ -1,54 +1,220 @@
-body {
-    font-family: Arial, sans-serif;
+/* font */
+.eb-garamond-header {
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 600; /* You can use any weight from 400 to 800 */
+    font-style: normal;
+    font-size: 2rem;
+  }
+ 
+/* General styling for paragraphs */
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem; /* Adjust size as needed */
     line-height: 1.6;
+    color: #333; /* Optional: A soft dark color for readability */
+}
+
+
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    line-height: 1.6;
     color: #333;
-    background-color: #f4f4f9;
+    background-color: #f5f5f5;
+    font-family: "Times New Roman", Times, serif;
 }
 
+/* Header Section */
 header {
-    text-align: center;
-    background-color: #042046;
-    color: #fff;
-    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #00274C; /* Darker blue for contrast */
+    color: #ffffff;
+    border-bottom: 4px solid #e84a27; /* University of Illinois orange */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-section {
-    padding: 2em;
-    margin: 1em 0;
+header img {
+    width: 50px;
+    max-width: 60px;
+    height: auto;
+    margin-right: 1rem;
 }
 
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff; 
+    margin: 0;
+    margin-right: 1rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #ffffff;
+    opacity: 0.9;
+    margin: 0;
+    padding-left: 0.5rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-tagline {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    opacity: 0.8;
+}
+
+
+/* Section Headings */
 h2 {
-    color: #000000;
+    font-size: 1.5rem;
+    color: #003366;
+    margin-bottom: 0.5rem;
+
+
+}
+
+/* Summary Section */
+#summary {
+    padding: 1.5rem;
+    background: #ffffff;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#summary p {
+    margin-bottom: 1rem;
+}
+
+#summary ul{
+    font-family: 'EB Garamond', serif;
+}
+
+#summary li{
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 16px;
+    margin: 0 auto;
+
 }
 
 .stats {
     display: flex;
-    gap: 1em;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .stats div {
-    background: #d6d8d8;
-    padding: 1em;
-    border-radius: 5px;
+    background-color: #dedede;
+    padding: 0.75rem;
+    border-radius: 8px;
     text-align: center;
+    font-weight: bold;
+}
+
+/* Visualization Section */
+#visualization {
+    padding: 1.5rem;
+    background: #ffffff;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#visualization #map {
+    background-color: #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Image Sections */
+section img {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 8px;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Image will take up the full width of its container */
+    max-width: 750px; /* Ensures the image doesn't stretch larger than 60px if the container grows */
+    height: auto; /* Maintains the aspect ratio */
 }
 
 
-#map, #predictions {
-    border: 1px solid #e3e3e3;
-    padding: 2em;
-    margin-top: 1em;
+
+
+/* Each Section Container */
+section {
+    padding: 1.5rem;
+    background: #ffffff;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ML Insights */
+#ml-insights {
+    padding: 1.5rem;
+    background: #ffffff;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+#about {
+    padding: 1.5rem;
+    background: #ffffff;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
     text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    background: #003366;
+    color: white;
 }
 
-#map {
-    height: 400px;
-    width: 400px;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .header-logo{
+        max-width: 40px;
+    }
+
+    .stats {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    section img{
+        max-width: 90%;
+    }
 }
+
+/* ProjectOverview */
+
+
