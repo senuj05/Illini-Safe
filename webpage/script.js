@@ -4,24 +4,19 @@ function initMap() {
         attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    const incidents = [
-        { coords: [40.1020, -88.2272], type: "Theft" },
-        { coords: [40.1042, -88.2271], type: "Vandalism" },
-        { coords: [40.1075, -88.2269], type: "Assault" }
-    ];
-    incidents.forEach(incident => {
-        L.marker(incident.coords).addTo(map)
-            .bindPopup(`<b>Incident:</b> ${incident.type}`);
-    });
-}
-
-// Placeholder for predictions
-function showPredictions() {
-    console.log("ML predictions will display here.");
+    const topLocationCoords = [40.1105, -88.2139];//Mark 1401 W Green St
+    L.marker(topLocationCoords).addTo(map)
+        .bindPopup("<b>Top Location:</b> 1401 W Green St, Urbana<br><b>Incidents:</b> 8")
+        .openPopup();
 }
 
 // Call functions on page load
 window.onload = function() {
     initMap();
-    showPredictions();
+    //showPredictions();
 };
+
+// Placeholder for predictions
+function showPredictions() {
+    console.log("ML predictions will display here.");
+}

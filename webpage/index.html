@@ -66,6 +66,12 @@
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors'
             }).addTo(map);
+            const topLocationCoords = [40.1105, -88.2139];//Mark 1401 W Green St
+            L.marker(topLocationCoords).addTo(map)
+                .bindPopup("<b>Top Location:</b> 1401 W Green St, Urbana<br><b>Incidents:</b> 26")
+                .openPopup();
+
+
         </script>
     </section>
 
