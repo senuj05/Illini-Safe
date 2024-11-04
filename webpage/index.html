@@ -6,11 +6,18 @@
     <title>lliniSafe</title>
     <title> Incident Visualization</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Londrina+Sketch&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
 </head>
 <body>
@@ -22,12 +29,7 @@
             
         </div>
     </header>
-    
-
-
-
-
-
+ 
     <!-- Summary Section -->
     <section id="summary">
         <h2 class="eb-garamond-header">Project Overview</h2>
@@ -57,9 +59,14 @@
     <!-- Data Visualization Section -->
     <section id="visualization">
         <h2 class="eb-garamond-header">Incident Hotspots</h2>
-        <div id="map"> <!-- Placeholder for Map Visualization -->
-            <p>Interactive map of incident hotspots goes here.</p>
-        </div>
+        <div id="map"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            const map = L.map('map').setView([40.1020, -88.2272], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+        </script>
     </section>
 
     <section id="The Hour with Most Frequent Incidents">
@@ -91,12 +98,6 @@
             <!-- Placeholder for Predictions -->
             <p>Predicted incident patterns go here.</p>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2 class="eb-garamond-header">About This Project</h2>
-        <p>This project was created as part of a campus safety initiative.</p>
     </section>
 
     <script src="script.js"></script>
