@@ -6,18 +6,21 @@
     <title>lliniSafe</title>
     <title> Incident Visualization</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Londrina+Sketch&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+
 
 </head>
 <body>
@@ -61,6 +64,9 @@
         <h2 class="eb-garamond-header">Incident Hotspots</h2>
         <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+        
+
         <script>
             const map = L.map('map').setView([40.1020, -88.2272], 13);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -68,10 +74,24 @@
             }).addTo(map);
             const topLocationCoords = [40.1105, -88.2139];//Mark 1401 W Green St
             L.marker(topLocationCoords).addTo(map)
-                .bindPopup("<b>Top Location:</b> 1401 W Green St, Urbana<br><b>Incidents:</b> 26")
+                .bindPopup("<b>Top Location:</b> 1401 W Green St, Urbana<br><b>Incidents:</b> 8")
                 .openPopup();
+            const incidentData = [
+                    [40.1105, -88.2139, 0.8],  // 1401 W Green St, Urbana (8 incidents)
+                    [40.0961, -88.2434, 0.7],  // 1804 S Neil St, Champaign (7 incidents)
+                    [40.1109, -88.2350, 0.6],  // 407 E Green St, Champaign (6 incidents)
+                    [40.1113, -88.2206, 0.5],  // 1301 Springfield Av, Urbana (5 incidents)
+                    [40.1043, -88.2290, 0.5]   // 812 S Sixth St, Champaign (5 incidents)
+            ];
+
+            incidentData.forEach(([lat, lng, intensity], index) => {
+            L.marker([lat, lng]).addTo(map)
+                .bindPopup(`<b>Location ${index + 1}</b><br>Incidents: ${intensity * 10}`);
+            });
 
 
+
+            L.heatLayer(incidentData,{radius:25,blur:15,maxZoom:17,gradient:{0.4:'blue',0.65:'lime',1:'red'}}).addTo(map);
         </script>
     </section>
 
@@ -94,7 +114,6 @@
         <p>The location with the most incidents is: 1401 W Green St, Urbana with 8 incidents.</p>
 
     </section>
-
 
     <!-- ML Insights Section -->
     <section id="ml-insights">
