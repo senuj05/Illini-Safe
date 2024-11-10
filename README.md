@@ -32,7 +32,6 @@ The website uses data analysis and machine learning to provide insights into cam
 - **Predictive Modeling**: Uses historical data to predict future incidents.
 - **Visualization**: Graphs and maps to visualize the data.
 
-The machine learning models are built using Python libraries such as scikit-learn and TensorFlow.
 
 ## Other
 
