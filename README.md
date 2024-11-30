@@ -2,7 +2,7 @@
 
 # IlliniSafe  - README
 
-Welcome to the Campus Safety Project! This platform is designed to provide detailed and timely information about campus safety incidents to the UIUC community. This README file will guide you through the setup, features, and usage of the website.
+Welcome to the Illini Safe Project! This platform is designed to provide detailed and timely information about campus safety incidents to the UIUC community. This README file will guide you through the setup, features, and usage of the website.
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ Welcome to the Campus Safety Project! This platform is designed to provide detai
 
 ## Project Overview
 
-The Campus Safety Website aims to provide the UIUC community with up-to-date information about safety incidents on campus. By analyzing historical data, the website helps users understand trends and patterns in campus safety incidents. The website includes interactive maps, visualizations, and machine learning models to predict and analyze safety incidents.
+The Illini Safe Website aims to provide the UIUC community with up-to-date information about safety incidents on campus. By analyzing historical data, the website helps users understand trends and patterns in campus safety incidents. The website includes interactive maps, visualizations, and machine learning models to predict and analyze safety incidents.
 
 ## Features
 
