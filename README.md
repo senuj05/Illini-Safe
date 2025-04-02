@@ -32,17 +32,5 @@ The website uses data analysis and machine learning to provide insights into cam
 - **Predictive Modeling**: Uses historical data to predict future incidents.
 - **Visualization**: Graphs and maps to visualize the data.
 
-
-## Other
-
-
-
-## Contact
-
-For any questions or feedback, please contact:
-
-- Name: Senuvi Jayasinghe
-- Email: senu0531@gmail.com / senuj2@illinois.edu
-
 ---
 
